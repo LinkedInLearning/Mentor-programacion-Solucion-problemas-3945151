@@ -16,12 +16,9 @@ const PageHome: React.FC = () => {
             <section className="bg-white vh-100 mt-5">
 
                 <div className="w-50 mx-auto d-flex justify-content-between pt-5">
-
-                    <BotonAnimado texto={seccionesServicios[0]} />
-                    <BotonAnimado texto={seccionesServicios[1]} />
-                    <AnimatedButton conts={seccionesServicios[2]} />
-                    <AnimatedButton conts={seccionesServicios[3]} />
-
+                    {seccionesServicios.map((servicio, index) => (
+                        <AnimatedButton key={index} conts={servicio} />
+                    ))}
                 </div>
 
             </section>
